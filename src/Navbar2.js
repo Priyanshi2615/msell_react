@@ -4,24 +4,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCog, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import "./style.css";
 
+
 const Navbar2 = () => {
   return (
-    <Navbar expand="lg" className="custom-navbar" bg="dark" variant="dark">
+    <div style={{ position: "sticky", top: "0" }}>
+    <Navbar expand="lg" className="custom-navbar" bg="light" variant="light">
       
-      <Navbar.Brand href="#home">
+      {/*<Navbar.Brand href="#home">
       <img
           src="/images/mSELL_logo.png"
           alt="Your Logo"
           height="30px"
           width="30px"
-style={{marginLeft:'30px',marginRight:'30px',}}
-        /></Navbar.Brand>
+        /></Navbar.Brand>*/}
 
-      <div className="vertical-line"></div>
+     
 
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto" style={{position:'absolute',marginLeft:'1150px',}}>
+        <Nav className="mr-auto" style={{position:'absolute',marginLeft:'1050px',}}>
           <NavDropdown title="Admin" id="Admin-dropdown">
             <NavDropdown.Item href="#profile" className="user-link">
               <FontAwesomeIcon icon={faUser} /> Profile
@@ -39,8 +40,10 @@ style={{marginLeft:'30px',marginRight:'30px',}}
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" style={{color:'lightgrey'}}/>
         </Form>
-      </Navbar.Collapse>
+      ,</Navbar.Collapse>
     </Navbar>
+    <hr style={{marginLeft:'-11px',}}></hr>
+    </div>
   );
 };
 

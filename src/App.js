@@ -1,17 +1,14 @@
 import React from 'react';
 import './style.css'; 
-import Navbar2 from './Navbar2'; 
+
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MenuBar from './MenuBar';
-import CardRow from './CardRow';
+import Dashboard from './Dashboard';
 
 
 function App() {
   return (
     <div className="App">
-      <Navbar2 />
-      <MenuBar />
-      <CardRow />
+      <Dashboard />
       <div className="container">
        
       </div>
