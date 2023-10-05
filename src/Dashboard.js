@@ -1,9 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import SideBar from "./SideBar";
-import CardRow from "./CardRow";
-import Form from "./Form";
-import MapCointainer from "./MapCointainer";
+import DashboardComponent from "./DashboardComponent";
 import Navbar2 from "./Navbar2";
 import CustomNavbar from "./CustomNavbar";
 
@@ -18,9 +16,7 @@ const Dashboard = () => {
           <div className="content-cointainer" style={{marginBottom:'70px'}}>
             <Navbar2 />
             <CustomNavbar />
-            <Form />
-            <CardRow />
-            <MapCointainer />
+            <DashboardComponent />
           </div>
         </Col>
       </Row>

@@ -48,7 +48,7 @@ function CustomNavbar() {
 
   const renderMobileNavbar = () => {
     return (
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" style={{overFlowX:'hidden',}}>
         <div className="header">
           <div className="logo-dropdown">
             <Dropdown>
