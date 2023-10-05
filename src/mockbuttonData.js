@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { fetchButtonData } from './Api'; // Import your fetchButtonData function
+import { fetchButtonData } from './Api'; 
 
 function App() {
   const [buttonData, setButtonData] = useState([]);
 
   useEffect(() => {
-    // Fetch the button data when the component mounts
+
     fetchButtonData().then((data) => {
       setButtonData(data);
     });

@@ -5,20 +5,23 @@ import CardRow from "./CardRow";
 import Form from "./Form";
 import MapCointainer from "./MapCointainer";
 import Navbar2 from "./Navbar2";
+import CustomNavbar from "./CustomNavbar";
 
 const Dashboard = () => {
   return (
     <Container fluid>
       <Row>
-        <Col sm={3} md={2} className="bg-light">
+        <Col sm={3} md={2} style={{padding:'0px',}}>
           <SideBar />
         </Col>
         <Col sm={9} md={10} className="p-0">
-        <Navbar2 />
-       
-          <Form />
-          <CardRow />
-          <MapCointainer />
+          <div className="content-cointainer" style={{marginBottom:'70px'}}>
+            <Navbar2 />
+            <CustomNavbar />
+            <Form />
+            <CardRow />
+            <MapCointainer />
+          </div>
         </Col>
       </Row>
     </Container>

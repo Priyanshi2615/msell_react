@@ -26,10 +26,10 @@ class Form extends Component {
 
   render() {
     return (
-      <div className="login-form" style={{marginTop:'10px'}}>
+      <div className="login-form" id="login" style={{ marginTop: '10px' }}>
         <form onSubmit={this.handleSubmit}>
-          <div className="form-row">
-            <div className="form-group">
+          <div className="form-row" id="logininput">
+            <div className="form-group" style={{ overflowX: 'auto' }}>
               <label htmlFor="dateRange">Date Range:</label>
               <input
                 type="text"
