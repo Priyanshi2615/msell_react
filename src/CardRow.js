@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col,Card, Button } from "react-bootstrap";
 import {
   faUser,
@@ -11,31 +11,39 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./style.css";
+import CardTables from "./CardTables";
 
-const CardRow = () => {
+
+function CardRow() {
+  const [showTable, setShowTable] = useState(false);
+
+  const handleMoreButtonClick = () => {
+    setShowTable(!showTable);
+  };
   return (
-    <div className="container" style={{marginRight:'-50px',}}>
+    <div className="container" style={{marginRight:'-100px',}}>
      <Col sm={9} md={10} className="p-0">
       <div className="row">
         <div className="col-md-3 mb-4">
           <Card
             className="custom-card"
+            id="mobilecard"
             style={{
               backgroundImage:
-                "linear-gradient(to top, #ffbd96 0%, #fe8caa 100%)",
+                " linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)",
               boxShadow: "8px 8px 8px rgba(0, 0, 0, 0.2)",
               transition: "box-shadow 0.3s",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = "0 0 0 transparent";
               e.currentTarget.style.backgroundImage =
-                "linear-gradient(to right, #fe8caa 0%, #fe8caa 100%)";
+                " linear-gradient(to bottom, #67a6e4 0%, #67a6e4 100%)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow =
                 "0px 4px 8px rgba(0, 0, 0, 0.2)";
               e.currentTarget.style.backgroundImage =
-                "linear-gradient(to top, #ffbd96 0%, #fe8caa 100%)";
+                "linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)";
             }}
           >
             <Card.Body>
@@ -69,30 +77,33 @@ const CardRow = () => {
                 backgroundColor: "#ffff",
                 color: "black",
               }}
+              onClick={handleMoreButtonClick}
             >
               More
             </Button>
           </Card>
+          {showTable && <CardTables />}
         </div>
         <div className="col-md-3 mb-4">
           <Card
             className="custom-card"
+            id="mobilecard"
             style={{
               backgroundImage:
-                " linear-gradient(to bottom, #3698e5 0%, #b7ddfa 100%)",
+                " linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)",
               boxShadow: "8px 8px 8px rgba(0, 0, 0, 0.2)",
               transition: "box-shadow 0.3s",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = "0 0 0 transparent";
               e.currentTarget.style.backgroundImage =
-                " linear-gradient(to bottom, #3698e5 0%, #3698e5 100%)";
+                " linear-gradient(to bottom, #67a6e4 0%, #67a6e4 100%)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow =
                 "0px 4px 8px rgba(0, 0, 0, 0.2)";
               e.currentTarget.style.backgroundImage =
-                "linear-gradient(to bottom, #3698e5 0%, #b7ddfa 100%)";
+                "linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)";
             }}
           >
             <Card.Body>
@@ -136,22 +147,23 @@ const CardRow = () => {
         <div className="col-md-3 mb-4">
           <Card
             className="custom-card"
+            id="mobilecard"
             style={{
               backgroundImage:
-                "linear-gradient(to bottom, #3ad6be 0%, #c0f2ea 100%)",
+                " linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)",
               boxShadow: "8px 8px 8px rgba(0, 0, 0, 0.2)",
               transition: "box-shadow 0.3s",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = "0 0 0 transparent";
               e.currentTarget.style.backgroundImage =
-                "linear-gradient(to bottom, #3ad6be 0%, #3ad6be 100%)";
+                " linear-gradient(to bottom, #67a6e4 0%, #67a6e4 100%)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow =
                 "0px 4px 8px rgba(0, 0, 0, 0.2)";
               e.currentTarget.style.backgroundImage =
-                "linear-gradient(to bottom, #3ad6be 0%, #c0f2ea 100%)";
+                "linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)";
             }}
           >
             <Card.Body>
@@ -194,6 +206,7 @@ const CardRow = () => {
         <div className="col-md-3 mb-4">
           <Card
             className="custom-card"
+            id="mobilecardrow"
             style={{
               backgroundImage:
                 " linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)",
@@ -253,6 +266,7 @@ const CardRow = () => {
         <div className="col-md-3 mb-4">
           <Card
             className="custom-card"
+            id="mobilecard"
             style={{
               backgroundImage:
                 " linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)",
@@ -311,22 +325,23 @@ const CardRow = () => {
         <div className="col-md-3 mb-4">
           <Card
             className="custom-card"
+            id="mobilecard"
             style={{
               backgroundImage:
-                "linear-gradient(to bottom, #85e0e0 0%, #d6f5f5 100%)",
+                " linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)",
               boxShadow: "8px 8px 8px rgba(0, 0, 0, 0.2)",
               transition: "box-shadow 0.3s",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = "0 0 0 transparent";
               e.currentTarget.style.backgroundImage =
-                "linear-gradient(to bottom, #8de2e2 0%, #8de2e2 100%)";
+                " linear-gradient(to bottom, #67a6e4 0%, #67a6e4 100%)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow =
                 "0px 4px 8px rgba(0, 0, 0, 0.2)";
               e.currentTarget.style.backgroundImage =
-                "linear-gradient(to bottom, #85e0e0 0%, #d6f5f5 100%)";
+                "linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)";
             }}
           >
             <Card.Body>
@@ -369,6 +384,7 @@ const CardRow = () => {
         <div className="col-md-3 mb-4">
           <Card
             className="custom-card"
+            id="mobilecard"
             style={{
               backgroundImage:
                 " linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)",
@@ -427,22 +443,23 @@ const CardRow = () => {
         <div className="col-md-3 mb-4">
           <Card
             className="custom-card"
+            id="mobilecardrow"
             style={{
               backgroundImage:
-                "linear-gradient(to bottom, #85e0e0 0%, #d6f5f5 100%)",
+                " linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)",
               boxShadow: "8px 8px 8px rgba(0, 0, 0, 0.2)",
               transition: "box-shadow 0.3s",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = "0 0 0 transparent";
               e.currentTarget.style.backgroundImage =
-                "linear-gradient(to bottom, #8de2e2 0%, #8de2e2 100%)";
+                " linear-gradient(to bottom, #67a6e4 0%, #67a6e4 100%)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow =
                 "0px 4px 8px rgba(0, 0, 0, 0.2)";
               e.currentTarget.style.backgroundImage =
-                "linear-gradient(to bottom, #85e0e0 0%, #d6f5f5 100%)";
+                "linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)";
             }}
           >
             <Card.Body>
@@ -486,22 +503,23 @@ const CardRow = () => {
         <div className="col-md-3 mb-4">
           <Card
             className="custom-card"
+            id="mobilecard"
             style={{
               backgroundImage:
-                "linear-gradient(to bottom, #85e0e0 0%, #d6f5f5 100%)",
+                " linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)",
               boxShadow: "8px 8px 8px rgba(0, 0, 0, 0.2)",
               transition: "box-shadow 0.3s",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = "0 0 0 transparent";
               e.currentTarget.style.backgroundImage =
-                "linear-gradient(to bottom, #8de2e2 0%, #8de2e2 100%)";
+                " linear-gradient(to bottom, #67a6e4 0%, #67a6e4 100%)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow =
                 "0px 4px 8px rgba(0, 0, 0, 0.2)";
               e.currentTarget.style.backgroundImage =
-                "linear-gradient(to bottom, #85e0e0 0%, #d6f5f5 100%)";
+                "linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)";
             }}
           >
             <Card.Body>
@@ -543,6 +561,7 @@ const CardRow = () => {
         <div className="col-md-3 mb-4">
           <Card
             className="custom-card"
+            id="mobilecard"
             style={{
               backgroundImage:
                 " linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)",
@@ -601,22 +620,23 @@ const CardRow = () => {
         <div className="col-md-3 mb-4">
           <Card
             className="custom-card"
+            id="mobilecard"
             style={{
               backgroundImage:
-                "linear-gradient(to bottom, #85e0e0 0%, #d6f5f5 100%)",
+                " linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)",
               boxShadow: "8px 8px 8px rgba(0, 0, 0, 0.2)",
               transition: "box-shadow 0.3s",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.boxShadow = "0 0 0 transparent";
               e.currentTarget.style.backgroundImage =
-                "linear-gradient(to bottom, #8de2e2 0%, #8de2e2 100%)";
+                " linear-gradient(to bottom, #67a6e4 0%, #67a6e4 100%)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.boxShadow =
                 "0px 4px 8px rgba(0, 0, 0, 0.2)";
               e.currentTarget.style.backgroundImage =
-                "linear-gradient(to bottom, #85e0e0 0%, #d6f5f5 100%)";
+                "linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)";
             }}
           >
             <Card.Body>
@@ -660,6 +680,7 @@ const CardRow = () => {
         <div className="col-md-3 mb-4">
           <Card
             className="custom-card"
+            id="mobilecardrow"
             style={{
               backgroundImage:
                 " linear-gradient(to bottom, #67a6e4 0%, #d4e6f7 100%)",
